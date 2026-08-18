@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it and link to the canonical release page."
+title: "Wiseek Filing Impact Monthly"
+type: dataset
+authors:
+  - name: "Wiseek"
+    website: "https://wiseek.ai"
+url: "https://wiseek.ai/datasets/"
+repository: "https://github.com/arikshkol/wiseek-datasets"
+license: CC-BY-4.0
+keywords:
+  - SEC filings
+  - event study
+  - market reaction
+  - importance scoring
+  - sentiment
+abstract: >
+  Monthly aggregate statistics measuring how SEC filings moved US stocks:
+  AI importance score (1-10) and disclosure sentiment versus next-session
+  excess price moves, split by filing family and market-cap bucket.
+  Aggregates only; no per-filing rows. Canonical: https://wiseek.ai/datasets/
