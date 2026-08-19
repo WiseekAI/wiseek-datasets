@@ -1,0 +1,110 @@
+{
+  "period": "2026-07-24..2026-08-14",
+  "window_start": "2026-07-24",
+  "window_end_exclusive": "2026-08-15",
+  "t1_only": true,
+  "panel_note": "Filer panel and tape are fixed to THIS window (90 days ending at the window end). The overlapping monthly release uses its own month-end panel, so shared events can show slightly different excess values there; monthly figures are canonical.",
+  "dry_run": false,
+  "series": "Wiseek Filing Impact Monthly",
+  "method_version": "v5-2026-08",
+  "source_payload_sha256": "e309029679929bbbf98692b84c17d17feb0e79d863aab80841ce2d73b1b7331c",
+  "n_filed_total": 18285,
+  "n_measured_t1": 11416,
+  "exclusion_counts": {
+    "sub_10c": 218,
+    "late_capture": 1555,
+    "move_cap_300": 11,
+    "split_window": 9,
+    "missing_close": 77
+  },
+  "filer_panel_size": 6268,
+  "tape_series": [
+    {
+      "date": "2026-07-27",
+      "panel_n": 6178,
+      "tape_median_pct": 0.167
+    },
+    {
+      "date": "2026-07-28",
+      "panel_n": 6178,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-07-29",
+      "panel_n": 6181,
+      "tape_median_pct": -0.683
+    },
+    {
+      "date": "2026-07-30",
+      "panel_n": 6181,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-07-31",
+      "panel_n": 6185,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-08-03",
+      "panel_n": 6187,
+      "tape_median_pct": 0.872
+    },
+    {
+      "date": "2026-08-04",
+      "panel_n": 6188,
+      "tape_median_pct": 0.586
+    },
+    {
+      "date": "2026-08-05",
+      "panel_n": 6192,
+      "tape_median_pct": -0.011
+    },
+    {
+      "date": "2026-08-06",
+      "panel_n": 6194,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-08-07",
+      "panel_n": 6195,
+      "tape_median_pct": 0.247
+    },
+    {
+      "date": "2026-08-10",
+      "panel_n": 6198,
+      "tape_median_pct": -0.149
+    },
+    {
+      "date": "2026-08-11",
+      "panel_n": 6198,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-08-12",
+      "panel_n": 6199,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-08-13",
+      "panel_n": 6201,
+      "tape_median_pct": 0.032
+    },
+    {
+      "date": "2026-08-14",
+      "panel_n": 6202,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-08-17",
+      "panel_n": 6202,
+      "tape_median_pct": -0.335
+    }
+  ],
+  "scoring_model_note": "Scores and sentiment are point-in-time as stored at enrichment; never re-scored after the fact.",
+  "definitions": {
+    "event_leg": "publication price -> exact next-session close (T+1); this release is T+1-only (T+5 arrives with the monthly series)",
+    "tape_leg": "filer-panel close-to-close median for the same t1_date session; panel = tickers with >=1 SEC filing in the 90 days ending at THIS WINDOW's (exclusive) end date (one fixed panel for the window, NY dates) and a real close pair",
+    "excess": "event T+1 move minus same-session tape median; legs intentionally differ and are disclosed",
+    "insufficient_sample": "stats withheld when measured n < 30"
+  }
+}
