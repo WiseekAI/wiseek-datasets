@@ -3,6 +3,18 @@
   "window_start": "2026-07-24",
   "window_end_exclusive": "2026-08-15",
   "t1_only": true,
+  "events_provenance": {
+    "source_url": "https://wiseek.ai/research/filing-impact-index/data.csv",
+    "source_sha256": "e76a0756a11af4265cb13818ac5c060ae29dacd51e51e3dd31a8ab2c76e9a4e9",
+    "archive_sha256": "0df1ddc6624f6587382cad314fdd2dcd5cf3feea37be38a9fff5cdff2f033ab6",
+    "sliced_at_utc": "2026-08-19T09:22:22.519Z",
+    "window_start": "2026-07-24",
+    "window_end_exclusive": "2026-08-15",
+    "rows": 8729,
+    "late_capture_annotated": 691,
+    "note": "The source is a rolling 90-day file regenerated every ~4h; reproduce analyses from THIS archived snapshot, not the live file."
+  },
+  "events_reproduction_recipe": "events_score7plus.csv is the PRE-exclusion, PRE-dedup universe (score>=7 only; scores 1-6 appear solely in aggregate tables). To reproduce n_measured cells: keep rows where BOTH exclusion_reason AND dataset_excluded are empty, then one observation per (ticker, NY date of accepted_at_utc) keeping the highest score (earliest accepted_at on ties). t1_pct is RAW; subtract tape_series[t1_date] from meta.json for excess. Verified to reproduce all score-level cells exactly at publication.",
   "panel_note": "Filer panel and tape are fixed to THIS window (90 days ending at the window end). The overlapping monthly release uses its own month-end panel, so shared events can show slightly different excess values there; monthly figures are canonical.",
   "dry_run": false,
   "series": "Wiseek Filing Impact Monthly",
