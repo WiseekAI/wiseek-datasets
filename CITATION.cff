@@ -7,6 +7,7 @@ authors:
     website: "https://wiseek.ai"
 url: "https://wiseek.ai/datasets/"
 repository: "https://github.com/WiseekAI/wiseek-datasets"
+doi: 10.5281/zenodo.22047734
 license: CC-BY-4.0
 keywords:
   - SEC filings

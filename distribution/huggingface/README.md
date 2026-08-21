@@ -55,6 +55,8 @@ band.
 
 > Wiseek Filing Impact Monthly, {release}. Wiseek. https://wiseek.ai/datasets/{release}/
 
+DOI (all versions): https://doi.org/10.5281/zenodo.22047734
+
 ## More from Wiseek
 
 - Product homepage: https://wiseek.ai/
