@@ -59,6 +59,9 @@ band.
 
 - Product homepage: https://wiseek.ai/
 - Plans and pricing: https://wiseek.ai/pricing/
+- Dilution Risk Tracker (free tool): https://wiseek.ai/dilution-tracker/
+- Stock Split Calendar (free tool): https://wiseek.ai/split-calendar/
+- Live Filing Impact Tracker (rolling 90-day data): https://wiseek.ai/research/filing-impact-index/
 - Scored market news: https://wiseek.ai/news/
 - Ticker pages (about 6,800): https://wiseek.ai/ticker/
 - Plain-English filing explainers: https://wiseek.ai/filings/
