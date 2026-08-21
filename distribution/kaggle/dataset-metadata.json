@@ -1,0 +1,9 @@
+{
+  "title": "SEC Filing Impact — Wiseek Monthly Series",
+  "id": "REPLACE_WITH_KAGGLE_USERNAME/wiseek-filing-impact-monthly",
+  "subtitle": "Do SEC filings move stocks? AI importance scores vs measured next-session excess moves",
+  "description": "Monthly statistics measuring how SEC filings moved US stocks: Wiseek's AI importance score (1-10) and disclosure sentiment vs next-session EXCESS price moves (market-day effect subtracted via a filer-panel tape median), split by filing family and market-cap bucket — plus a per-event archive (ticker, company, form, score, sentiment, next-session result) for published filings scoring 7+.\n\nCanonical home & methodology: https://wiseek.ai/datasets/\nGitHub mirror (checksummed): https://github.com/WiseekAI/wiseek-datasets\n\nEvery aggregate cell reproduces exactly from the included per-event file — the reproduction recipe ships in meta.json. Statistics are withheld for cells under n=30. Language is 'moved after', never 'caused by'. License: CC BY 4.0 — free for any use with attribution and a link to the release page used.",
+  "licenses": [{ "name": "CC-BY-SA-4.0" }],
+  "keywords": ["finance", "investing", "sec filings", "event study", "stock market", "nlp"],
+  "resources": []
+}
