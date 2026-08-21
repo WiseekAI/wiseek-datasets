@@ -47,3 +47,11 @@ attribution. Cite as:
 > Wiseek Filing Impact Monthly, YYYY-MM. Wiseek. https://wiseek.ai/datasets/YYYY-MM/
 
 See `CITATION.cff`. First release: **2026-08** (published early September 2026).
+
+## Explore Wiseek
+
+- **Homepage:** https://wiseek.ai/ — real-time AI scoring of every SEC filing
+- **Live dashboard & plans:** https://wiseek.ai/pricing/
+- **Market news hub** (importance-scored, sentiment-labeled): https://wiseek.ai/news/
+- **All ~6,800 covered tickers:** https://wiseek.ai/ticker/
+- **SEC filings, explained in plain English:** https://wiseek.ai/filings/

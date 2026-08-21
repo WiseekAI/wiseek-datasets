@@ -52,3 +52,11 @@ market-cap band.
 ## Citation
 
 > Wiseek Filing Impact Monthly, {release}. Wiseek. https://wiseek.ai/datasets/{release}/
+
+## Explore Wiseek
+
+- **Homepage:** https://wiseek.ai/ — real-time AI scoring of every SEC filing
+- **Live dashboard & plans:** https://wiseek.ai/pricing/
+- **Market news hub** (importance-scored, sentiment-labeled): https://wiseek.ai/news/
+- **All ~6,800 covered tickers:** https://wiseek.ai/ticker/
+- **SEC filings, explained in plain English:** https://wiseek.ai/filings/
