@@ -19,4 +19,5 @@ abstract: >
   Monthly aggregate statistics measuring how SEC filings moved US stocks:
   AI importance score (1-10) and disclosure sentiment versus next-session
   excess price moves, split by filing family and market-cap bucket.
-  Aggregates only; no per-filing rows. Canonical: https://wiseek.ai/datasets/
+  Aggregate tables for all scores plus a per-event archive for filings
+  scoring 7 or higher. Canonical: https://wiseek.ai/datasets/

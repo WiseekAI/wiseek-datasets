@@ -67,8 +67,11 @@ commercial included, with attribution. Cite as:
 > Wiseek Filing Impact Monthly, YYYY-MM. Wiseek. https://wiseek.ai/datasets/YYYY-MM/
 
 DOI (all versions): https://doi.org/10.5281/zenodo.22047734
-See `CITATION.cff`. First release: the launch note (2026-07-24 to 2026-08-14).
-The first full monthly release (August 2026) lands in early September.
+See `CITATION.cff`. Releases: the launch note (2026-07-24 to 2026-08-14, T+1 only) and
+`data/2026-08/`, August 2026, the first full monthly release (13,760 filings measured
+at T+1 across 21 trading sessions; 13,694 also at T+5). For filings dated 2026-08-01
+to 2026-08-14 (New York date) the August files are canonical; the launch note's
+overlapping rows are superseded.
 
 ## More from Wiseek
 

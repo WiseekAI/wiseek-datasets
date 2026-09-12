@@ -67,6 +67,15 @@ measurement. Filings Wiseek scored 9 or 10 moved a median 4.99% (excess) by the
 next close. Filings scored 1 to 4 moved 2.14%. The gap held in every market-cap
 band.
 
+## What August 2026 showed
+
+Across the 21 trading sessions of August 2026, 13,760 filings had a clean
+next-session measurement (13,694 also had a T+5 close). Among after-hours
+8-K/6-K filings by micro-cap companies, those scored 9 or 10 moved a median
+5.05% (excess) by the next close; those scored 1 to 4 moved 2.63% (n=106 vs
+115). August is the canonical release for the days it shares with the launch
+note (filings dated 2026-08-01 to 2026-08-14, New York date).
+
 ## Citation
 
 > Wiseek Filing Impact Monthly, {release}. Wiseek. https://wiseek.ai/datasets/{release}/
