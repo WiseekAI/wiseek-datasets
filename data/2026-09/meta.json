@@ -1,0 +1,150 @@
+{
+  "period": "2026-09",
+  "month": "2026-09",
+  "events_provenance": {
+    "source_url": "https://wiseek.ai/research/filing-impact-index/data.csv",
+    "source_sha256": "fb501e7995ff701fc8aef4acf7c26d6a5bd67b0aa9d2be59683b0ba9a1562a78",
+    "archive_sha256": "5d9053dfc7a6f0bad7704fbb404a7fec630119b37ce63baa227d703cf30ad837",
+    "sliced_at_utc": "2026-10-27T11:38:34.003Z",
+    "window_start": "2026-09-01",
+    "window_end_exclusive": "2026-10-01",
+    "rows": 3757,
+    "late_capture_annotated": 290,
+    "note": "The source is a rolling 90-day file regenerated every ~4h; reproduce analyses from THIS archived snapshot, not the live file."
+  },
+  "events_reproduction_recipe": "events_score7plus.csv is the PRE-exclusion, PRE-dedup universe (score>=7 only; scores 1-6 appear solely in aggregate tables). To reproduce n_measured cells: keep rows where BOTH exclusion_reason AND dataset_excluded are empty, then one observation per (ticker, NY date of accepted_at_utc) keeping the highest score (earliest accepted_at on ties). t1_pct is RAW; subtract tape_series[t1_date] from meta.json for excess. Verified to reproduce all score-level cells exactly at publication.",
+  "dry_run": false,
+  "series": "Wiseek Filing Impact Monthly",
+  "method_version": "v5-2026-08",
+  "source_payload_sha256": "d430d1da8f9723abf0dec8ff460e2b4f14658f722da6f063036d17a8619666c2",
+  "n_filed_total": 14560,
+  "n_measured_t1": 9574,
+  "n_measured_t5": 9526,
+  "exclusion_counts": {
+    "sub_10c": 159,
+    "late_capture": 807,
+    "move_cap_300": 10,
+    "split_window": 8,
+    "missing_close": 61
+  },
+  "t5_exclusion_counts": {
+    "t5_move_cap_300": 77,
+    "t5_split_window": 17,
+    "t5_missing_close": 61
+  },
+  "filer_panel_size": 6248,
+  "tape_series": [
+    {
+      "date": "2026-09-02",
+      "panel_n": 6145,
+      "tape_median_pct": 0.294
+    },
+    {
+      "date": "2026-09-03",
+      "panel_n": 6151,
+      "tape_median_pct": 0.06
+    },
+    {
+      "date": "2026-09-04",
+      "panel_n": 6152,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-09-08",
+      "panel_n": 6155,
+      "tape_median_pct": -0.435
+    },
+    {
+      "date": "2026-09-09",
+      "panel_n": 6155,
+      "tape_median_pct": -0.766
+    },
+    {
+      "date": "2026-09-10",
+      "panel_n": 6158,
+      "tape_median_pct": -0.487
+    },
+    {
+      "date": "2026-09-11",
+      "panel_n": 6159,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-09-14",
+      "panel_n": 6159,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-09-15",
+      "panel_n": 6159,
+      "tape_median_pct": -0.508
+    },
+    {
+      "date": "2026-09-16",
+      "panel_n": 6159,
+      "tape_median_pct": -0.2
+    },
+    {
+      "date": "2026-09-17",
+      "panel_n": 6160,
+      "tape_median_pct": 0.16
+    },
+    {
+      "date": "2026-09-18",
+      "panel_n": 6160,
+      "tape_median_pct": -0.19
+    },
+    {
+      "date": "2026-09-21",
+      "panel_n": 6163,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-09-22",
+      "panel_n": 6165,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-09-23",
+      "panel_n": 6166,
+      "tape_median_pct": -1.036
+    },
+    {
+      "date": "2026-09-24",
+      "panel_n": 6167,
+      "tape_median_pct": -0.098
+    },
+    {
+      "date": "2026-09-25",
+      "panel_n": 6168,
+      "tape_median_pct": 0
+    },
+    {
+      "date": "2026-09-28",
+      "panel_n": 6170,
+      "tape_median_pct": -0.504
+    },
+    {
+      "date": "2026-09-29",
+      "panel_n": 6171,
+      "tape_median_pct": -0.084
+    },
+    {
+      "date": "2026-09-30",
+      "panel_n": 6171,
+      "tape_median_pct": -0.248
+    },
+    {
+      "date": "2026-10-01",
+      "panel_n": 6173,
+      "tape_median_pct": 0
+    }
+  ],
+  "scoring_model_note": "Scores and sentiment are point-in-time as stored at enrichment; never re-scored after the fact.",
+  "definitions": {
+    "event_leg": "publication price -> exact next-session close (T+1); cumulative-from-print for cum_t5 (contains T+1; raw, no tape leg)",
+    "tape_leg": "filer-panel close-to-close median for the same t1_date session; panel = tickers with >=1 SEC filing in the 90 days ending at month-end (one fixed panel per month, NY dates) and a real close pair",
+    "excess": "event T+1 move minus same-session tape median; legs intentionally differ and are disclosed",
+    "insufficient_sample": "stats withheld when measured n < 30"
+  }
+}

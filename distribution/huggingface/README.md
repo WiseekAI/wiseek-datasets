@@ -76,6 +76,16 @@ next-session measurement (13,694 also had a T+5 close). Among after-hours
 115). August is the canonical release for the days it shares with the launch
 note (filings dated 2026-08-01 to 2026-08-14, New York date).
 
+## What September 2026 showed
+
+Across the 21 trading sessions of September 2026, 9,574 filings had a clean
+next-session measurement (9,526 also had a T+5 close). Among after-hours 8-K/6-K
+filings by micro-cap companies, those scored 9 or 10 moved a median 4.27% in
+either direction (excess) by the next close; those scored 1 to 4 moved 2.11%
+(n=94 vs 143). From
+September, a follow-up filing merged into an earlier filing's page is the same
+event and is not counted a second time.
+
 ## Citation
 
 > Wiseek Filing Impact Monthly, {release}. Wiseek. https://wiseek.ai/datasets/{release}/

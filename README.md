@@ -67,11 +67,13 @@ commercial included, with attribution. Cite as:
 > Wiseek Filing Impact Monthly, YYYY-MM. Wiseek. https://wiseek.ai/datasets/YYYY-MM/
 
 DOI (all versions): https://doi.org/10.5281/zenodo.22047734
-See `CITATION.cff`. Releases: the launch note (2026-07-24 to 2026-08-14, T+1 only) and
+See `CITATION.cff`. Releases: the launch note (2026-07-24 to 2026-08-14, T+1 only),
 `data/2026-08/`, August 2026, the first full monthly release (13,760 filings measured
-at T+1 across 21 trading sessions; 13,694 also at T+5). For filings dated 2026-08-01
-to 2026-08-14 (New York date) the August files are canonical; the launch note's
-overlapping rows are superseded.
+at T+1 across 21 trading sessions; 13,694 also at T+5), and `data/2026-09/`, September
+2026 (9,574 measured at T+1 across 21 trading sessions; 9,526 also at T+5). For filings
+dated 2026-08-01 to 2026-08-14 (New York date) the August files are canonical; the
+launch note's overlapping rows are superseded. From September 2026 a follow-up filing
+merged into an earlier filing's page is the same event and is not counted a second time.
 
 ## More from Wiseek
 
