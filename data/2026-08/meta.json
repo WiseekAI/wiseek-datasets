@@ -2,34 +2,40 @@
   "period": "2026-08",
   "month": "2026-08",
   "events_provenance": {
-    "source_url": "https://wiseek.ai/research/filing-impact-index/data.csv",
-    "source_sha256": "7a6abc3c8e4b7a918e37eddfb57e66ae05c61214aca6424fb0a306e8de4a712f",
-    "archive_sha256": "83239854c826a3afde36e128654b4e7228d2ee27804a1e3c629084ff0bbf7bb0",
-    "sliced_at_utc": "2026-09-12T11:15:55.613Z",
+    "source_url": "C:/Users/ariks/wiseek-dataset-correction-2026-10/build/tracker_120d.csv",
+    "source_sha256": "a17e8ebad9f8cd89e48e568db1f010c8badee9bf6656f30ccb0213fb43eaf94b",
+    "archive_sha256": "5f8de334a97455ded7cb6a1d48244795edfecbda3e34734e4e2fc998e845a29c",
+    "sliced_at_utc": "2026-10-28T13:11:13.696Z",
     "window_start": "2026-08-01",
     "window_end_exclusive": "2026-09-01",
-    "rows": 8357,
+    "rows": 8352,
     "late_capture_annotated": 667,
     "note": "The source is a rolling 90-day file regenerated every ~4h; reproduce analyses from THIS archived snapshot, not the live file."
   },
   "events_reproduction_recipe": "events_score7plus.csv is the PRE-exclusion, PRE-dedup universe (score>=7 only; scores 1-6 appear solely in aggregate tables). To reproduce n_measured cells: keep rows where BOTH exclusion_reason AND dataset_excluded are empty, then one observation per (ticker, NY date of accepted_at_utc) keeping the highest score (earliest accepted_at on ties). t1_pct is RAW; subtract tape_series[t1_date] from meta.json for excess. Verified to reproduce all score-level cells exactly at publication.",
   "dry_run": false,
+  "corrections": [
+    {
+      "date": "2026-10-28",
+      "text": "This release was first published with next-session closes captured after 17:15 New York time. For many tickers that price was an after-hours trade, not the official close: across all sessions since 2026-07-24, 6.2% of stored closes were more than 0.5% away from it. Every close is now the official regular-session close (method v6), and this page, its files and every figure on it are recomputed. The headline moved little: micro-cap after-hours 8-K/6-K filings scored 9-10 moved a median 4.95% (first edition 5.05%) against 2.61% (2.63%) for scores 1-4. Filings counted: 21,896 (21,901), because five filings now count as the same event as an earlier filing: three follow-ups merged into an earlier filing's page after this release was first published, and two filings whose page names another filing's page as canonical. Measured at T+1: 13,758 (13,760); at T+5: 13,693 (13,694). The first edition remains in the version history on GitHub and Zenodo (10.5281/zenodo.22725088)."
+    }
+  ],
   "series": "Wiseek Filing Impact Monthly",
-  "method_version": "v5-2026-08",
-  "source_payload_sha256": "d00e04984ff5f5c5373cab867200f3715f965e71cfc283088e93e557c625e734",
-  "n_filed_total": 21901,
-  "n_measured_t1": 13760,
-  "n_measured_t5": 13694,
+  "method_version": "v6-2026-10",
+  "source_payload_sha256": "82a340aac1d84c3c9df599e1ba58ea72ebc48917f09666d7bb3860d76c3f02a6",
+  "n_filed_total": 21896,
+  "n_measured_t1": 13758,
+  "n_measured_t5": 13693,
   "exclusion_counts": {
     "sub_10c": 288,
     "late_capture": 1589,
-    "move_cap_300": 20,
-    "split_window": 28,
+    "move_cap_300": 24,
+    "split_window": 26,
     "missing_close": 103
   },
   "t5_exclusion_counts": {
-    "t5_move_cap_300": 105,
-    "t5_split_window": 48,
+    "t5_move_cap_300": 109,
+    "t5_split_window": 45,
     "t5_missing_close": 103
   },
   "filer_panel_size": 6264,
@@ -37,12 +43,12 @@
     {
       "date": "2026-08-04",
       "panel_n": 6161,
-      "tape_median_pct": 0.599
+      "tape_median_pct": 0.68
     },
     {
       "date": "2026-08-05",
       "panel_n": 6166,
-      "tape_median_pct": -0.024
+      "tape_median_pct": -0.058
     },
     {
       "date": "2026-08-06",
@@ -52,12 +58,12 @@
     {
       "date": "2026-08-07",
       "panel_n": 6169,
-      "tape_median_pct": 0.264
+      "tape_median_pct": 0.287
     },
     {
       "date": "2026-08-10",
       "panel_n": 6173,
-      "tape_median_pct": -0.159
+      "tape_median_pct": -0.181
     },
     {
       "date": "2026-08-11",
@@ -82,27 +88,27 @@
     {
       "date": "2026-08-17",
       "panel_n": 6181,
-      "tape_median_pct": -0.345
+      "tape_median_pct": -0.368
     },
     {
       "date": "2026-08-18",
       "panel_n": 6183,
-      "tape_median_pct": -0.217
+      "tape_median_pct": -0.207
     },
     {
       "date": "2026-08-19",
       "panel_n": 6186,
-      "tape_median_pct": 0.096
+      "tape_median_pct": 0.097
     },
     {
       "date": "2026-08-20",
       "panel_n": 6188,
-      "tape_median_pct": -0.345
+      "tape_median_pct": -0.373
     },
     {
       "date": "2026-08-21",
       "panel_n": 6190,
-      "tape_median_pct": 0.195
+      "tape_median_pct": 0.218
     },
     {
       "date": "2026-08-24",
@@ -127,17 +133,17 @@
     {
       "date": "2026-08-28",
       "panel_n": 6192,
-      "tape_median_pct": -0.195
+      "tape_median_pct": -0.212
     },
     {
       "date": "2026-08-31",
       "panel_n": 6192,
-      "tape_median_pct": -0.233
+      "tape_median_pct": -0.249
     },
     {
       "date": "2026-09-01",
       "panel_n": 6192,
-      "tape_median_pct": -0.67
+      "tape_median_pct": -0.726
     }
   ],
   "scoring_model_note": "Scores and sentiment are point-in-time as stored at enrichment; never re-scored after the fact.",
@@ -145,6 +151,7 @@
     "event_leg": "publication price -> exact next-session close (T+1); cumulative-from-print for cum_t5 (contains T+1; raw, no tape leg)",
     "tape_leg": "filer-panel close-to-close median for the same t1_date session; panel = tickers with >=1 SEC filing in the 90 days ending at month-end (one fixed panel per month, NY dates) and a real close pair",
     "excess": "event T+1 move minus same-session tape median; legs intentionally differ and are disclosed",
+    "close": "official regular-session closing price: InsightSentry's regular-session close, captured after the session ends; sessions before 2026-10-28 corrected to the official close from the unadjusted end-of-day file (Polygon grouped daily). A listing with no trade that day carries its last price.",
     "insufficient_sample": "stats withheld when measured n < 30"
   }
 }

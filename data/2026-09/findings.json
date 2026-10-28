@@ -5,7 +5,7 @@
   "claims": [
     {
       "id": "C1",
-      "text": "Among after-hours 8-K/6-K filings by micro-cap companies, those Wiseek scored 9–10 moved a median 4.27% in either direction (excess of the filer-panel tape) by the next close, vs 2.11% for scores 1–4 — 2.0× the movement (n=94 vs n=143).",
+      "text": "Among after-hours 8-K/6-K filings by micro-cap companies, those Wiseek scored 9–10 moved a median 4.50% in either direction (excess of the filer-panel tape) by the next close, vs 2.01% for scores 1–4 — 2.2× the movement (n=94 vs n=143).",
       "cells": [
         {
           "bucket": "micro",
@@ -13,15 +13,15 @@
             "n": 94,
             "grp": "9-10",
             "mcap_bucket": "micro",
-            "median_abs_excess_pct": 4.27
+            "median_abs_excess_pct": 4.5
           },
           "lo": {
             "n": 143,
             "grp": "1-4",
             "mcap_bucket": "micro",
-            "median_abs_excess_pct": 2.11
+            "median_abs_excess_pct": 2.01
           },
-          "gap": 2.16
+          "gap": 2.49
         }
       ]
     }

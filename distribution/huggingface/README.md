@@ -62,29 +62,39 @@ after outcomes are known. The wording throughout is "moved after," not "caused b
 
 ## What the launch window showed
 
-Between 2026-07-24 and 2026-08-14, 11,416 filings had a clean next-session
-measurement. Filings Wiseek scored 9 or 10 moved a median 4.99% (excess) by the
-next close. Filings scored 1 to 4 moved 2.14%. The gap held in every market-cap
-band.
+Between 2026-07-24 and 2026-08-14, 11,415 filings had a clean next-session
+measurement. Among after-hours 8-K/6-K filings by micro-cap companies, those
+scored 9 or 10 moved a median 4.86% (excess) by the next close; those scored 1 to
+4 moved 2.22% (n=120 vs 88). The gap held in every market-cap band.
 
 ## What August 2026 showed
 
-Across the 21 trading sessions of August 2026, 13,760 filings had a clean
-next-session measurement (13,694 also had a T+5 close). Among after-hours
+Across the 21 trading sessions of August 2026, 13,758 filings had a clean
+next-session measurement (13,693 also had a T+5 close). Among after-hours
 8-K/6-K filings by micro-cap companies, those scored 9 or 10 moved a median
-5.05% (excess) by the next close; those scored 1 to 4 moved 2.63% (n=106 vs
+4.95% (excess) by the next close; those scored 1 to 4 moved 2.61% (n=106 vs
 115). August is the canonical release for the days it shares with the launch
 note (filings dated 2026-08-01 to 2026-08-14, New York date).
 
 ## What September 2026 showed
 
-Across the 21 trading sessions of September 2026, 9,574 filings had a clean
-next-session measurement (9,526 also had a T+5 close). Among after-hours 8-K/6-K
-filings by micro-cap companies, those scored 9 or 10 moved a median 4.27% in
-either direction (excess) by the next close; those scored 1 to 4 moved 2.11%
-(n=94 vs 143). From
-September, a follow-up filing merged into an earlier filing's page is the same
-event and is not counted a second time.
+Across the 21 trading sessions of September 2026, 9,575 filings had a clean
+next-session measurement (9,528 also had a T+5 close). Among after-hours 8-K/6-K
+filings by micro-cap companies, those scored 9 or 10 moved a median 4.50% in
+either direction (excess) by the next close; those scored 1 to 4 moved 2.01%
+(n=94 vs 143). A follow-up filing merged into an earlier filing's page, or whose
+page names another filing's page as canonical, is the same event and is not
+counted a second time.
+
+## Corrections
+
+**2026-10-28.** The launch note, August and September releases were first published with next-session closes
+captured after 17:15 New York time. For many tickers that price was an after-hours trade rather than the official
+close: 6.2% of the stored closes since 2026-07-24 were more than 0.5% away from it. Every close is now the official
+regular-session close (method v6), and all three releases were rebuilt and republished; each release page and its
+`meta.json` carry the correction notice with the old and new headline figures. The headline claims moved little and
+all still pass their gates. The first editions remain in this repository's history and as earlier Zenodo versions:
+launch note 10.5281/zenodo.22047735, August 10.5281/zenodo.22725088, September 10.5281/zenodo.23690083.
 
 ## Citation
 

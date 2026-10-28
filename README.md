@@ -59,6 +59,16 @@ sentiment are point-in-time as stored at enrichment and never re-scored after
 outcomes are known. Every aggregate cell reproduces exactly from the per-event
 file; the recipe is in `meta.json`.
 
+## Corrections
+
+**2026-10-28.** The launch note, August and September releases were first published with next-session closes
+captured after 17:15 New York time. For many tickers that price was an after-hours trade rather than the official
+close: 6.2% of the stored closes since 2026-07-24 were more than 0.5% away from it. Every close is now the official
+regular-session close (method v6), and all three releases were rebuilt and republished; each release page and its
+`meta.json` carry the correction notice with the old and new headline figures. The headline claims moved little and
+all still pass their gates. The first editions remain in this repository's history and as earlier Zenodo versions:
+launch note 10.5281/zenodo.22047735, August 10.5281/zenodo.22725088, September 10.5281/zenodo.23690083.
+
 ## License and citation
 
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Free for any use,
@@ -68,12 +78,13 @@ commercial included, with attribution. Cite as:
 
 DOI (all versions): https://doi.org/10.5281/zenodo.22047734
 See `CITATION.cff`. Releases: the launch note (2026-07-24 to 2026-08-14, T+1 only),
-`data/2026-08/`, August 2026, the first full monthly release (13,760 filings measured
-at T+1 across 21 trading sessions; 13,694 also at T+5), and `data/2026-09/`, September
-2026 (9,574 measured at T+1 across 21 trading sessions; 9,526 also at T+5). For filings
+`data/2026-08/`, August 2026, the first full monthly release (13,758 filings measured
+at T+1 across 21 trading sessions; 13,693 also at T+5), and `data/2026-09/`, September
+2026 (9,575 measured at T+1 across 21 trading sessions; 9,528 also at T+5). For filings
 dated 2026-08-01 to 2026-08-14 (New York date) the August files are canonical; the
-launch note's overlapping rows are superseded. From September 2026 a follow-up filing
-merged into an earlier filing's page is the same event and is not counted a second time.
+launch note's overlapping rows are superseded. A follow-up filing merged into an earlier
+filing's page, or whose page names another filing's page as canonical, is the same event and
+is not counted a second time. Closes are official regular-session closes (see Corrections).
 
 ## More from Wiseek
 

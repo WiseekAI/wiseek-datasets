@@ -4,28 +4,34 @@
   "window_end_exclusive": "2026-08-15",
   "t1_only": true,
   "events_provenance": {
-    "source_url": "https://wiseek.ai/research/filing-impact-index/data.csv",
-    "source_sha256": "e76a0756a11af4265cb13818ac5c060ae29dacd51e51e3dd31a8ab2c76e9a4e9",
-    "archive_sha256": "0df1ddc6624f6587382cad314fdd2dcd5cf3feea37be38a9fff5cdff2f033ab6",
-    "sliced_at_utc": "2026-08-19T09:22:22.519Z",
+    "source_url": "C:/Users/ariks/wiseek-dataset-correction-2026-10/build/tracker_120d.csv",
+    "source_sha256": "a17e8ebad9f8cd89e48e568db1f010c8badee9bf6656f30ccb0213fb43eaf94b",
+    "archive_sha256": "46cd41f41675fa0c025bc8d217407fa8126ae75936d944394067a1a387a02204",
+    "sliced_at_utc": "2026-10-28T13:11:11.786Z",
     "window_start": "2026-07-24",
     "window_end_exclusive": "2026-08-15",
-    "rows": 8729,
+    "rows": 8727,
     "late_capture_annotated": 691,
     "note": "The source is a rolling 90-day file regenerated every ~4h; reproduce analyses from THIS archived snapshot, not the live file."
   },
   "events_reproduction_recipe": "events_score7plus.csv is the PRE-exclusion, PRE-dedup universe (score>=7 only; scores 1-6 appear solely in aggregate tables). To reproduce n_measured cells: keep rows where BOTH exclusion_reason AND dataset_excluded are empty, then one observation per (ticker, NY date of accepted_at_utc) keeping the highest score (earliest accepted_at on ties). t1_pct is RAW; subtract tape_series[t1_date] from meta.json for excess. Verified to reproduce all score-level cells exactly at publication.",
   "panel_note": "Filer panel and tape are fixed to THIS window (90 days ending at the window end). The overlapping monthly release uses its own month-end panel, so shared events can show slightly different excess values there; monthly figures are canonical.",
   "dry_run": false,
+  "corrections": [
+    {
+      "date": "2026-10-28",
+      "text": "This note was first published with next-session closes captured after 17:15 New York time. For many tickers that price was an after-hours trade, not the official close: across all sessions since 2026-07-24, 6.2% of stored closes were more than 0.5% away from it. Every close is now the official regular-session close (method v6), and this page, its files and every figure on it are recomputed. The headline moved little: micro-cap after-hours 8-K/6-K filings scored 9-10 moved a median 4.86% (first edition 4.99%) against 2.22% (2.14%) for scores 1-4. Filings counted: 18,283 (18,285), because two filings whose page names another filing's page as canonical now count as the same event as that filing. Measured at T+1: 11,415 (11,416). The first edition remains in the version history on GitHub and Zenodo (10.5281/zenodo.22047735)."
+    }
+  ],
   "series": "Wiseek Filing Impact Monthly",
-  "method_version": "v5-2026-08",
-  "source_payload_sha256": "e309029679929bbbf98692b84c17d17feb0e79d863aab80841ce2d73b1b7331c",
-  "n_filed_total": 18285,
-  "n_measured_t1": 11416,
+  "method_version": "v6-2026-10",
+  "source_payload_sha256": "214d0a6d07d3ce35bab122df032fa47201275d888a1b180a65f2e215e789bc0d",
+  "n_filed_total": 18283,
+  "n_measured_t1": 11415,
   "exclusion_counts": {
     "sub_10c": 218,
     "late_capture": 1555,
-    "move_cap_300": 11,
+    "move_cap_300": 13,
     "split_window": 9,
     "missing_close": 77
   },
@@ -34,7 +40,7 @@
     {
       "date": "2026-07-27",
       "panel_n": 6178,
-      "tape_median_pct": 0.167
+      "tape_median_pct": 0.189
     },
     {
       "date": "2026-07-28",
@@ -44,12 +50,12 @@
     {
       "date": "2026-07-29",
       "panel_n": 6181,
-      "tape_median_pct": -0.683
+      "tape_median_pct": -0.658
     },
     {
       "date": "2026-07-30",
       "panel_n": 6181,
-      "tape_median_pct": 0
+      "tape_median_pct": 0.001
     },
     {
       "date": "2026-07-31",
@@ -59,17 +65,17 @@
     {
       "date": "2026-08-03",
       "panel_n": 6187,
-      "tape_median_pct": 0.872
+      "tape_median_pct": 0.863
     },
     {
       "date": "2026-08-04",
       "panel_n": 6188,
-      "tape_median_pct": 0.586
+      "tape_median_pct": 0.676
     },
     {
       "date": "2026-08-05",
       "panel_n": 6192,
-      "tape_median_pct": -0.011
+      "tape_median_pct": -0.039
     },
     {
       "date": "2026-08-06",
@@ -79,12 +85,12 @@
     {
       "date": "2026-08-07",
       "panel_n": 6195,
-      "tape_median_pct": 0.247
+      "tape_median_pct": 0.276
     },
     {
       "date": "2026-08-10",
       "panel_n": 6198,
-      "tape_median_pct": -0.149
+      "tape_median_pct": -0.166
     },
     {
       "date": "2026-08-11",
@@ -99,7 +105,7 @@
     {
       "date": "2026-08-13",
       "panel_n": 6201,
-      "tape_median_pct": 0.032
+      "tape_median_pct": 0.028
     },
     {
       "date": "2026-08-14",
@@ -109,7 +115,7 @@
     {
       "date": "2026-08-17",
       "panel_n": 6202,
-      "tape_median_pct": -0.335
+      "tape_median_pct": -0.357
     }
   ],
   "scoring_model_note": "Scores and sentiment are point-in-time as stored at enrichment; never re-scored after the fact.",
@@ -117,6 +123,7 @@
     "event_leg": "publication price -> exact next-session close (T+1); this release is T+1-only (T+5 arrives with the monthly series)",
     "tape_leg": "filer-panel close-to-close median for the same t1_date session; panel = tickers with >=1 SEC filing in the 90 days ending at THIS WINDOW's (exclusive) end date (one fixed panel for the window, NY dates) and a real close pair",
     "excess": "event T+1 move minus same-session tape median; legs intentionally differ and are disclosed",
+    "close": "official regular-session closing price: InsightSentry's regular-session close, captured after the session ends; sessions before 2026-10-28 corrected to the official close from the unadjusted end-of-day file (Polygon grouped daily). A listing with no trade that day carries its last price.",
     "insufficient_sample": "stats withheld when measured n < 30"
   }
 }
